@@ -1,0 +1,47 @@
+# Composer
+/vendor/
+composer.lock
+
+# Logs
+*.log
+logs/
+
+# Cache
+/cache/
+temp/
+tmp/
+
+# IDEs
+/.idea/
+/.vscode/
+/*.sublime-project
+/*.sublime-workspace
+
+# Sistema de arquivos
+.DS_Store
+Thumbs.db
+
+# Ambiente
+.env
+.env.local
+.env.*.local
+
+# Build
+/public/build/
+public/assets/
+public/uploads/
+
+# Teste
+/tests/*.phpunit.result.xml
+/tests/logs/
+coverage/
+
+# Misc
+*.tmp
+*.bak
+*.swp
+*.swo
+*.zip
+
+# Documentação
+/docs/

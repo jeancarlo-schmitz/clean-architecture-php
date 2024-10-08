@@ -1,0 +1,28 @@
+# Ativar o modo de reescrita
+RewriteEngine On
+
+# Definir variáveis de ambiente
+# SetEnv APP_ENV dev  # Mude para 'prod' em produção
+
+# Redirecionar todas as requisições para o arquivo index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [QSA,L]
+
+# Protegendo o acesso ao diretório .env
+<Files .env>
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+# # Habilitar CORS (opcional, dependendo do seu caso de uso)
+# Header always set Access-Control-Allow-Origin "*"
+# Header always set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
+# Header always set Access-Control-Allow-Headers "Content-Type, Authorization, X-Requested-With"
+
+# Configurações adicionais de segurança
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set X-Frame-Options "DENY"
+</IfModule>
