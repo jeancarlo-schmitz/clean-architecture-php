@@ -11,7 +11,7 @@ O projeto foi desenvolvido utilizando o **Slim Framework**, mas sem dependência
 ## Estrutura de Pastas
 
 Abaixo está a estrutura de diretórios do projeto, organizada de acordo com os princípios da **Clean Architecture**:
-
+```
 src/
 ├── Application
 │   ├── Adapters
@@ -33,6 +33,7 @@ src/
 │   └── Routes
 ├── Middleware
 └── tests/
+```
 
 Essa estrutura permite uma clara separação de responsabilidades, facilitando a manutenção e expansão do código.
 
